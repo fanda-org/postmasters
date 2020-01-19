@@ -1,0 +1,12 @@
+{{define "users_view"}}
+{{$t := "User Info"}}
+{{template "header" $t}}
+
+<h1>{{$t}}</h1>
+<div>Username: {{.UserName}}</div>
+<div>First Name: {{.FirstName}}</div>
+<div>Last Name: {{if .LastName}}{{.LastName}}{{end}}</div>
+<p><a href="/users">Back</a>
+
+{{template "footer"}}
+{{end}}

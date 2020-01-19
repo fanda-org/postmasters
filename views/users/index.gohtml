@@ -1,0 +1,10 @@
+{{define "users_index"}}{{$t := "Users"}}
+{{template "header" $t}}
+<h1>{{$t}}</h1>
+<ul>
+{{range .}}
+  <li><a href="/users/{{.ID}}">{{.UserName}}</a>: {{.FirstName}}{{if .LastName}} {{.LastName}}{{end}}</li>
+{{end}}
+</ul>
+{{template "footer"}}
+{{end}}
